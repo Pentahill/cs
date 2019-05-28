@@ -1,0 +1,4 @@
+systemctl status [service]
+systemctl restart [service]
+systemctl stop [service]
+systemctl enable/disable [service]
