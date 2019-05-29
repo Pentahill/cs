@@ -1,0 +1,6 @@
+种类：
+	index: 普通索引
+	unique index: 唯一索引
+	primary key: 主键索引
+	fulltext： 全文索引
+	组合索引：

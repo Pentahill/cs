@@ -1,0 +1,8 @@
+string:
+list:
+set:
+sorted set:
+hash:
+bit array:
+hyperLogLog:
+stream:
