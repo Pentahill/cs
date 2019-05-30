@@ -1,8 +1,12 @@
-string:
-list:
-set:
-sorted set:
-hash:
-bit array:
-hyperLogLog:
-stream:
+数据类型：
+	string:
+	list:
+		使用linked list实现
+	set:
+	sorted set:
+	hash:
+	bit array:
+	hyperLogLog:
+	stream:
+
+最大键长： 512M
