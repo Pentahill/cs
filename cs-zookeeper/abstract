@@ -1,0 +1,32 @@
+服务定位：
+	特点：
+		高性能，高可用，严格有序访问。
+		如何保证：
+			Sequential Consistency：顺序一致性
+			Atomicity： 原子性
+			Single System Image： 一致性。
+			Reliability ：可靠性。
+			Timeliness ： 实时性。
+	功能：
+		命名，配置管理，同步，组服务。
+	数据模型是一个文件系统的目录树结构。
+	服务在内存中保存状态，事务日志，并在磁盘中存储快照。
+
+名词概念：
+	有层次的命名空间：
+	znode:数据寄存点，类似于文件和目录，数据放在内存，可实现高吞吐低延迟。
+		version: 每个节点都有版本，更新节点时，版本自增。
+		ACL: 每个节点都有相应的操作权限。
+		临时节点：生命周期与session一样。
+	watches:
+		watch: client可以在znode上设置watch,当znode变化时被触发。
+		watch event:
+	agreement protocol：（一致性协议）
+		leader server:
+		follower server:
+		atomic messaging layer:
+
+
+实现原理：
+		数据备份放置在内存中，更新操作会被记录在磁盘日志，写请求会被序列化到磁盘之后再更新到内存中。
+

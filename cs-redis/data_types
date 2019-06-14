@@ -4,6 +4,8 @@
 		使用linked list实现
 	set:
 	sorted set:
+		跳表 + hash表
+		更新复杂度：O(log(N))
 	hash:
 	bit array:
 	hyperLogLog:

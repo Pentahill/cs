@@ -1,9 +1,11 @@
 EXISTS:
 	EXISTS key
-DEL:
+DEL:（删除数据，包括集合类）
 	DEL key
-TYPE:
+TYPE:(数据类型）
 	TYPE key
+LLEN:(集合大小)
+	LLEN collection
 EXPIRE:
 	EXPIRE key timeout
 	过期时间会被持久化到硬盘，即使服务关闭，过期时间仍会起作用。
@@ -16,6 +18,73 @@ PTTL:
 PERSIST:
 	PERSIST key
 	移除过期时间
+
+HLL:
+	PFADD:
+	PFCOUNT:
+
+Bitmaps：
+	SETBIT:
+		SETBIT key position value
+	GETBIT:
+		GETBIT key position
+	BITCOUNT:
+		BITCOUNT key
+	BITPOS:
+		BITPOS key 1|0
+
+SORTED SET:
+	ZADD:
+		ZADD set score v [score v ...]
+	ZRANGE:
+		ZRANGE set start end [WITHSCORES]
+	ZREVRANGE:
+		ZREVRANGE set start end [WITHSCORES]
+	ZRANGEBYSCORE:
+		ZRANGEBYSCORE set [-INF ]
+	ZREMRANGEBYSCORE:
+		ZREMRANGEBYSCORE set score1 score2
+	ZRANK:
+		ZRANK set v
+	ZREVRANK:
+		ZREVRANK set v
+	ZRANGEBYLEX:
+	ZREVRANGEBYLEX:
+	ZREMRANGEBYLEX:
+	ZLEXCOUNT:
+
+SET:
+	SADD:
+		SADD set v1 [v2 ...]
+	SMEMBERS:
+		SMEMBERS set
+	SISMEMBER:
+		SISMEMBER set v
+	SINTER:
+		SINTER set1 set2 [set3 ...]
+	SPOP:
+		SPOP set
+	SUNIONSTORE:
+		SUNIONSTORE destination set1 [set2 ...]
+	SCARD:
+		SCARD set
+	SRANDMEMBER:(随即弹出几个元素)
+		SRANDMEMBER set count
+
+HASH:(类似与java中的对象)
+	HSET:
+		HSET object k v
+	HMSET:
+		HMSET object k v [k v ...]
+	HGET:
+		HGET object k
+	HMGET:
+		HMGET object k [k ...]
+	HGETALL:
+		HGETALL object
+	HINCRBY:
+		HINCRBY object k value
+
 
 LIST:
 	LPUSH:
