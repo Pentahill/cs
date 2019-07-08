@@ -1,3 +1,5 @@
 名词解释：
 	竞技状态：
 	死锁：
+
+	AbstractQueuedSynchronizer(AQS):
